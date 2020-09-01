@@ -1,0 +1,16 @@
+[{
+        "nome": "Flash",
+        "poder": "Speed",
+        "id": 1
+    },
+    {
+        "nome": "Superman",
+        "poder": "Strengh",
+        "id": 2
+    },
+    {
+        "nome": "Alien",
+        "poder": "Inteligence",
+        "id": 3
+    }
+]
