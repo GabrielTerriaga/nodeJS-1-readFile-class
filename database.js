@@ -39,6 +39,21 @@ class Database {
     const result = await this.escreverArquivos(finalData)
     return result
   }
+
+  async remover(id){
+    if(!id){
+      return await this.escreverArquivos([])
+    }
+
+    const data = await this.obterDadosArquivo()
+    const indice = data.findIndex(item => item.id === parseInt(id))
+    if(indice === -1){
+      throw Error('Hero not exist')
+    }
+    data.splice(indice, 1)
+
+    return await this.escreverArquivos(data)
+  }
 }
 
 module.exports = new Database()
